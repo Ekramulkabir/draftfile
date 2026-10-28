@@ -38,21 +38,29 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 941px;
-            height: 1200px;
-            transform-origin: 0 0
+            width: 1250px;
+            height: 1560px
         }
 
         .wrap {
-            width: 941px;
-            height: 1200px;
+            width: 1250px;
+            height: 1560px;
             padding: 14px 14px 10px;
             background: var(--bg);
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
             gap: 5px;
             overflow: hidden
+        }
+
+        .dashboard-content {
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 5px
         }
 
         h1 {
@@ -405,6 +413,7 @@
                     <div><b>$8.20 / $8.19</b><span>Avg. $/SF</span></div>
                 </div>
             </div>
+            <div class="dashboard-content">
             <div class="card">
                 <div class="row">
                     <div style="flex:1">
@@ -453,7 +462,7 @@
                                 style="background:#c98a1f;color:#fff;font-weight:700;font-size:11.5px;padding:5px 8px;margin-bottom:6px">
                                 Lighter Touch – Attainable Luxury</div>
                             <div style="position:relative">
-                                <div class="ph" id="map-dev-1" data-grow data-h="120" style="height:120px">[ Map
+                                <div class="ph" id="map-dev-1" style="height:120px">[ Map
                                     placeholder ]</div>
                                 <div class="ph" id="map-dev-1-key"
                                     style="position:absolute;right:6px;bottom:6px;width:100px;height:34px;background:#f1eee8;font-size:10px">
@@ -472,7 +481,7 @@
                                 style="background:#c0392b;color:#fff;font-weight:700;font-size:11.5px;padding:5px 8px;margin-bottom:6px">
                                 Heavier Touch – Attainable + Standard Luxury</div>
                             <div style="position:relative">
-                                <div class="ph" id="map-dev-2" data-grow data-h="120" style="height:120px">[ Map
+                                <div class="ph" id="map-dev-2" style="height:120px">[ Map
                                     placeholder ]</div>
                                 <div class="ph" id="map-dev-2-key"
                                     style="position:absolute;right:6px;bottom:6px;width:100px;height:34px;background:#f1eee8;font-size:10px">
@@ -1007,19 +1016,8 @@
                 </div>
             </div>
         </div>
+        </div>
     </div>
-    <script>
-        (function () {
-            var w = document.querySelector('.wrap'), st = document.getElementById('stage'), nav = document.getElementById('nav-dashboards'), g = [].slice.call(document.querySelectorAll('[data-grow]')), W = 941, H = 1200;
-            function build() {
-                w.style.zoom = ''; nav.style.height = '34px'; g.forEach(function (x) { x.style.height = x.dataset.h + 'px' }); w.style.width = W + 'px'; w.style.height = 'auto'; var h = w.scrollHeight;
-                if (h > H) { var k = H / h; w.style.zoom = k; w.style.width = (W / k) + 'px'; w.style.height = (H / k) + 'px'; }
-                else { var e = H - h; nav.style.height = (34 + e * .3) + 'px'; g.forEach(function (x) { x.style.height = (+x.dataset.h + e * .7) + 'px' }); w.style.height = H + 'px'; }
-            }
-            function fit() { var k = Math.min(innerWidth / W, innerHeight / H); st.style.transform = 'scale(' + k + ')'; st.style.left = Math.max(0, (innerWidth - W * k) / 2) + 'px'; }
-            build(); fit(); addEventListener('load', function () { build(); fit(); }); addEventListener('resize', fit);
-        })();
-    </script>
 </body>
 
 </html>

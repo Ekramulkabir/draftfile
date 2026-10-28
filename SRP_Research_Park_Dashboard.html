@@ -38,21 +38,29 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 941px;
-            height: 1620px;
-            transform-origin: 0 0
+            width: 1250px;
+            height: 2125px
         }
 
         .wrap {
-            width: 941px;
-            height: 1620px;
+            width: 1250px;
+            height: 2125px;
             padding: 14px 14px 10px;
             background: var(--bg);
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
             gap: 5px;
             overflow: hidden
+        }
+
+        .dashboard-content {
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 5px
         }
 
         h1 {
@@ -423,6 +431,7 @@
                     <div><b>$6.57–$8.19</b><span>Avg. $/SF</span></div>
                 </div>
             </div>
+            <div class="dashboard-content">
             <div class="row">
                 <div class="card" style="flex:1.2">
                     <div class="hd "><em>1</em>Site Overview</div>
@@ -460,7 +469,7 @@
             <div class="card">
                 <div class="hd "><em>2</em>Development Area / Typology Overview</div>
                 <div class="row">
-                    <div class="ph" id="map-dev" data-grow data-h="150" style="width:300px;height:150px">[ Development
+                    <div class="ph" id="map-dev" style="width:300px;height:150px">[ Development
                         area map placeholder ]</div>
                     <div class="box" style="flex:1;background:#f8f6f2"><b class="n" style="font-size:16px">A
                             four-program housing ecosystem</b>
@@ -898,19 +907,8 @@
                 </div>
             </div>
         </div>
+        </div>
     </div>
-    <script>
-        (function () {
-            var w = document.querySelector('.wrap'), st = document.getElementById('stage'), nav = document.getElementById('nav-dashboards'), g = [].slice.call(document.querySelectorAll('[data-grow]')), W = 941, H = 1620;
-            function build() {
-                w.style.zoom = ''; nav.style.height = '34px'; g.forEach(function (x) { x.style.height = x.dataset.h + 'px' }); w.style.width = W + 'px'; w.style.height = 'auto'; var h = w.scrollHeight;
-                if (h > H) { var k = H / h; w.style.zoom = k; w.style.width = (W / k) + 'px'; w.style.height = (H / k) + 'px'; }
-                else { var e = H - h; nav.style.height = (34 + e * .3) + 'px'; g.forEach(function (x) { x.style.height = (+x.dataset.h + e * .7) + 'px' }); w.style.height = H + 'px'; }
-            }
-            function fit() { var k = Math.min(innerWidth / W, innerHeight / H); st.style.transform = 'scale(' + k + ')'; st.style.left = Math.max(0, (innerWidth - W * k) / 2) + 'px'; }
-            build(); fit(); addEventListener('load', function () { build(); fit(); }); addEventListener('resize', fit);
-        })();
-    </script>
 </body>
 
 </html>

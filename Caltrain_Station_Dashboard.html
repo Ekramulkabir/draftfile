@@ -45,25 +45,33 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 941px;
-            height: 1694px;
-            transform-origin: 0 0
+            width: 1250px;
+            height: 2215px;
         }
 
         .wrap {
-            width: 941px;
-            height: 1694px;
+            width: 1250px;
+            height: 2215px;
             gap: 5px;
             padding: 14px 14px 10px;
             background: var(--bg);
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
             overflow: hidden
         }
 
-        .wrap>.card,
-        .wrap>.row {
+        .dashboard-content {
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 5px
+        }
+
+        .dashboard-content>.card,
+        .dashboard-content>.row {
             margin-bottom: 0 !important
         }
 
@@ -77,7 +85,7 @@
         .sub {
             font-size: 16px;
             color: #666;
-            margin: 2px 0 10px
+            margin: 2px 0 8px
         }
 
         .kpis {
@@ -405,7 +413,7 @@
                     <div><b>$7.57</b><span>Avg. $/SF</span></div>
                 </div>
             </div>
-
+            <div class="dashboard-content">
             <!-- 1 -->
             <div class="card">
                 <div class="row">
@@ -880,23 +888,7 @@
                     </div>
                 </div>
             </div>
-
-        </div>
     </div>
-    <script>
-        /* Canvas 1250 x 2250 (ratio 1.8): laid out at 941 x 1694 and scaled up x1.328.
-           Spare height: 30% to the nav bar, 70% to the development map; the height saved by the smaller section gaps (FREED) goes to the map. */
-        (function () {
-            var w = document.querySelector('.wrap'), st = document.getElementById('stage'), nav = document.getElementById('nav-dashboards'), map = document.getElementById('map-dev'), W = 941, H = 1694, FREED = 45;
-            function build() {
-                w.style.zoom = ''; nav.style.height = '34px'; map.style.height = '210px'; w.style.width = W + 'px'; w.style.height = 'auto'; var h = w.scrollHeight;
-                if (h > H) { var k = H / h; w.style.zoom = k; w.style.width = (W / k) + 'px'; w.style.height = (H / k) + 'px'; }
-                else { var e = H - h, b = Math.max(0, e - FREED) * 0.3; nav.style.height = (34 + b) + 'px'; map.style.height = (210 + e - b) + 'px'; w.style.height = H + 'px'; }
-            }
-            function fit() { var k = Math.min(innerWidth / W, innerHeight / H); st.style.transform = 'scale(' + k + ')'; st.style.left = Math.max(0, (innerWidth - W * k) / 2) + 'px'; }
-            build(); fit(); addEventListener('load', function () { build(); fit(); }); addEventListener('resize', fit);
-        })();
-    </script>
 </body>
 
 </html>
