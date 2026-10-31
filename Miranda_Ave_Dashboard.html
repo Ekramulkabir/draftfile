@@ -92,10 +92,11 @@
             align-items: center
         }
 
-        .kpi i {
-            font-style: normal;
-            font-size: 22px;
-            color: var(--gold)
+        .kpi img {
+            width: 32px;
+            height: 32px;
+            flex: none;
+            object-fit: contain
         }
 
         .kpi b {
@@ -164,6 +165,13 @@
             display: flex;
             gap: 8px;
             margin-bottom: 7px
+        }
+
+        .it img {
+            width: 26px;
+            height: 26px;
+            flex: none;
+            object-fit: contain
         }
 
         .it i {
@@ -333,6 +341,46 @@
             padding: 8px
         }
 
+        .profile-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 5px
+        }
+
+        .profile-detail img {
+            width: 18px;
+            height: 18px;
+            flex: none;
+            object-fit: contain
+        }
+
+        .positioning-icon,
+        .amenity-icon {
+            width: 22px;
+            height: 22px;
+            object-fit: contain
+        }
+
+        .positioning-icon {
+            display: block;
+            width: 30px;
+            height: 30px;
+            margin: 0 auto 4px
+        }
+
+        .profile-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 5px
+        }
+
+        .profile-detail img {
+            width: 18px;
+            height: 18px;
+            flex: none;
+            object-fit: contain
+        }
+
         .tan {
             background: #f3ead8
         }
@@ -367,6 +415,13 @@
             flex: none
         }
 
+        .am p img {
+            width: 22px;
+            height: 22px;
+            flex: none;
+            object-fit: contain
+        }
+
         .am .s {
             background: #d9eefa;
             border-radius: 4px;
@@ -394,22 +449,22 @@
 
             </div>
             <div class="kpis">
-                <div class="kpi"><i>★</i>
+                <div class="kpi"><img src="SLAC_Dashboard_Individual_Icons%20(1)/01_KPI_Sand_Hill_Prestige_Star.png" alt="">
                     <div><b>2</b><span>Residential Programs</span></div>
                 </div>
-                <div class="kpi"><i>🏢</i>
+                <div class="kpi"><img src="SLAC_Dashboard_Individual_Icons%20(1)/02_KPI_Total_Units_Building.png" alt="">
                     <div><b>920</b><span>Total Units</span></div>
                 </div>
-                <div class="kpi"><i>◔</i>
+                <div class="kpi"><img src="SLAC_Dashboard_Individual_Icons%20(1)/03_KPI_Program_Mix_Pie_Chart.png" alt="">
                     <div><b>13.0% / 87.0%</b><span>Low-Rise / <br/>Standard Luxury</span></div>
                 </div>
-                <div class="kpi"><i>📐</i>
+                <div class="kpi"><img src="SLAC_Dashboard_Individual_Icons%20(1)/04_KPI_Average_Unit_Size_Ruler.png" alt="">
                     <div><b>875 SF</b><span>Avg. Unit Size</span></div>
                 </div>
-                <div class="kpi"><i>$</i>
+                <div class="kpi"><img src="SLAC_Dashboard_Individual_Icons%20(1)/05_KPI_Average_Rent_Dollar_Coin.png" alt="">
                     <div><b>$5,385</b><span>Avg. Asking Rent</span></div>
                 </div>
-                <div class="kpi"><i>📊</i>
+                <div class="kpi"><img src="SLAC_Dashboard_Individual_Icons%20(1)/06_KPI_Rent_Per_SF_Bar_Chart.png" alt="">
                     <div><b>$6.15</b><span>Avg. $/SF</span></div>
                 </div>
             </div>
@@ -419,7 +474,7 @@
                     <div style="flex:1.05">
                         <div class="hd "><em>1</em>Site Overview</div>
                         <h3>Strengths &amp; Opportunities</h3>
-                        <div class="it"><i class="">🏆</i>
+                        <div class="it"><img src="SLAC_Dashboard_Individual_Icons%20(1)/08_Site_Employment_People.png" alt="">
                             <div><b>Seclusion Within an Active Employment Corridor</b>The site sits directly across from
                                 several major technology headquarters, including Google's Palo Alto offices and VMware,
                                 and is within minutes of Stanford Research Park, appealing to high-income renters who
@@ -432,14 +487,14 @@
                                 schools and a meaningful draw for older professionals and households with children.
                             </div>
                         </div>
-                        <div class="it"><i class="">🍂</i>
+                        <div class="it"><img src="SLAC_Dashboard_Individual_Icons%20(1)/09_Site_Seclusion_Tree.png" alt="">
                             <div><b>Opportunity for Placemaking</b>The vacancy of the Miranda Avenue site creates a
                                 clean-slate development opportunity for deliberate decisions about architecture,
                                 amenities, landscaping, and community programming tailored to the target renter profile.
                             </div>
                         </div>
                         <h3 class="r">Challenges &amp; Considerations</h3>
-                        <div class="it"><i class="r">⚠</i>
+                        <div class="it"><img src="SLAC_Dashboard_Individual_Icons%20(1)/12_Site_Transportation_Car.png" alt="">
                             <div><b>Limited Walkability</b>The site sits in an auto-oriented office park environment
                                 with minimal pedestrian infrastructure and no walkable retail or dining in the immediate
                                 vicinity.</div>
@@ -487,7 +542,7 @@
                     <div class="row">
                         <div style="width:100px">
                             <h3>Typology / Positioning</h3>
-                            <div style="font-size:24px;color:var(--gold);text-align:center">◎</div>
+                            <img class="positioning-icon" src="SLAC_Dashboard_Individual_Icons%20(1)/13_Positioning_Low_Rise_Building.png" alt="">
                             <div class="sm">Recommend a mixed low-rise and Standard Luxury program emphasizing
                                 seclusion, school-district appeal, green space, and proximity to employment.</div>
                         </div>
@@ -496,25 +551,25 @@
                             <div class="row">
                                 <div class="box" style="background:#d9eefa;flex:1;font-size:9.5px"><b class="n"
                                         style="font-size:12px">Low-Rise</b>
-                                    <p style="margin:5px 0"><b class="n">Audience:</b><br>Established Professionals,
-                                        Families, and Empty Nesters &amp; Downsizers</p>
-                                    <p style="margin:5px 0"><b class="n">Financial Status:</b><br>$250,000–$500,000+</p>
-                                    <p><b class="n">Motivation:</b><br>Safety, privacy, green space, larger floor plans,
-                                        low-maintenance living</p>
+                                    <p class="profile-detail" style="margin:5px 0"><img src="SLAC_Dashboard_Individual_Icons%20(1)/14_Standard_Luxury_Renter_Profile_People.png" alt=""><span><b class="n">Audience:</b><br>Established Professionals,
+                                        Families, and Empty Nesters &amp; Downsizers</span></p>
+                                    <p class="profile-detail" style="margin:5px 0"><img src="SLAC_Dashboard_Individual_Icons%20(1)/15_Standard_Luxury_Income_Dollar.png" alt=""><span><b class="n">Financial Status:</b><br>$250,000–$500,000+</span></p>
+                                    <p class="profile-detail"><img src="SLAC_Dashboard_Individual_Icons%20(1)/16_Standard_Luxury_Motivation_Target.png" alt=""><span><b class="n">Motivation:</b><br>Safety, privacy, green space, larger floor plans,
+                                        low-maintenance living</span></p>
                                 </div>
                                 <div class="box" style="background:#eadcf8;flex:1;font-size:9.5px"><b class="n"
                                         style="font-size:12px">Standard Luxury</b>
-                                    <p style="margin:5px 0"><b class="n">Audience:</b><br>Young Professionals,
-                                        Established Professionals, and Empty Nesters &amp; Downsizers</p>
-                                    <p style="margin:5px 0"><b class="n">Financial Status:</b><br>$150,000–$350,000+</p>
-                                    <p><b class="n">Motivation:</b><br>Proximity to employment, modern amenities,
-                                        convenience, and green space</p>
+                                    <p class="profile-detail" style="margin:5px 0"><img src="SLAC_Dashboard_Individual_Icons%20(1)/14_Standard_Luxury_Renter_Profile_People.png" alt=""><span><b class="n">Audience:</b><br>Young Professionals,
+                                        Established Professionals, and Empty Nesters &amp; Downsizers</span></p>
+                                    <p class="profile-detail" style="margin:5px 0"><img src="SLAC_Dashboard_Individual_Icons%20(1)/15_Standard_Luxury_Income_Dollar.png" alt=""><span><b class="n">Financial Status:</b><br>$150,000–$350,000+</span></p>
+                                    <p class="profile-detail"><img src="SLAC_Dashboard_Individual_Icons%20(1)/16_Standard_Luxury_Motivation_Target.png" alt=""><span><b class="n">Motivation:</b><br>Proximity to employment, modern amenities,
+                                        convenience, and green space</span></p>
                                 </div>
                             </div>
                         </div>
                         <div style="width:125px">
                             <h3>Positioning Rationale</h3>
-                            <div style="font-size:24px;color:var(--gold);text-align:center">◎</div>
+                            <img class="positioning-icon" src="SLAC_Dashboard_Individual_Icons%20(1)/20_Positioning_Rationale_Target.png" alt="">
                             <div class="sm">The site is positioned to appeal to the Palo Alto employee base seeking
                                 proximity to employment in a quieter, lower-density residential setting. Low-Rise units
                                 emphasize space and privacy, while Standard Luxury units provide a lower monthly entry
@@ -528,18 +583,18 @@
                         <div class="s">
                             <h4>Low-Rise</h4>
                             <p><i>🛋</i>High-quality unit finishes</p>
-                            <p><i>🌲</i>Focused core amenities</p>
+                            <p><img src="SLAC_Dashboard_Individual_Icons%20(1)/23_Standard_Luxury_Outdoor_Tree.png" alt="">Focused core amenities</p>
                             <p><i>🌿</i>Ample landscaped open space</p>
-                            <p><i>👥</i>Resident recreation and gathering areas</p>
-                            <p><i>⚙</i>Limited resident services</p>
+                            <p><img src="SLAC_Dashboard_Individual_Icons%20(1)/22_Standard_Luxury_Coworking_People.png" alt="">Resident recreation and gathering areas</p>
+                            <p><img src="SLAC_Dashboard_Individual_Icons%20(1)/25_Standard_Luxury_Resident_Services_Star.png" alt="">Limited resident services</p>
                         </div>
                         <div class="u">
                             <h4>Standard Luxury</h4>
                             <p><i>♛</i>Full market-standard amenity package</p>
                             <p><i>≋</i>Resort-style pool and courtyard</p>
-                            <p><i>🏋</i>Expanded fitness studio</p>
+                            <p><img src="SLAC_Dashboard_Individual_Icons%20(1)/21_Standard_Luxury_Fitness_Dumbbell.png" alt="">Expanded fitness studio</p>
                             <p><i>🍸</i>Club lounge</p>
-                            <p><i>⚙</i>Select resident services</p>
+                            <p><img src="SLAC_Dashboard_Individual_Icons%20(1)/25_Standard_Luxury_Resident_Services_Star.png" alt="">Select resident services</p>
                         </div>
                     </div>
                 </div>

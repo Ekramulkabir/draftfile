@@ -92,10 +92,11 @@
             align-items: center
         }
 
-        .kpi i {
-            font-style: normal;
-            font-size: 22px;
-            color: var(--gold)
+        .kpi img {
+            width: 32px;
+            height: 32px;
+            flex: none;
+            object-fit: contain
         }
 
         .kpi b {
@@ -164,6 +165,13 @@
             display: flex;
             gap: 8px;
             margin-bottom: 7px
+        }
+
+        .it img {
+            width: 26px;
+            height: 26px;
+            flex: none;
+            object-fit: contain
         }
 
         .it i {
@@ -333,6 +341,38 @@
             padding: 8px
         }
 
+        .profile-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 5px
+        }
+
+        .profile-detail img {
+            width: 18px;
+            height: 18px;
+            flex: none;
+            object-fit: contain
+        }
+
+        .positioning-icon,
+        .hd-icon,
+        .amenity-icon {
+            width: 22px;
+            height: 22px;
+            object-fit: contain
+        }
+
+        .positioning-icon {
+            display: block;
+            width: 30px;
+            height: 30px;
+            margin: 0 auto 4px
+        }
+
+        .hd-icon {
+            margin-right: 4px
+        }
+
         .tan {
             background: #f3ead8
         }
@@ -367,6 +407,13 @@
             flex: none
         }
 
+        .am p img {
+            width: 22px;
+            height: 22px;
+            flex: none;
+            object-fit: contain
+        }
+
         .am .s {
             background: #d9eefa;
             border-radius: 4px;
@@ -394,22 +441,22 @@
 
             </div>
             <div class="kpis">
-                <div class="kpi"><i>★</i>
+                <div class="kpi"><img src="SLAC_Dashboard_Individual_Icons%20(1)/01_KPI_Sand_Hill_Prestige_Star.png" alt="">
                     <div><b>25%</b><span>Sand Hill Road Premium</span></div>
                 </div>
-                <div class="kpi"><i>🏢</i>
+                <div class="kpi"><img src="SLAC_Dashboard_Individual_Icons%20(1)/02_KPI_Total_Units_Building.png" alt="">
                     <div><b>240 / 880</b><span>Total Units <br/>(Lighter / Heavier)</span></div>
                 </div>
-                <div class="kpi"><i>◔</i>
+                <div class="kpi"><img src="SLAC_Dashboard_Individual_Icons%20(1)/03_KPI_Program_Mix_Pie_Chart.png" alt="">
                     <div><b>1 / 2</b><span>Product Types <br/>(Lighter / Heavier)</span></div>
                 </div>
-                <div class="kpi"><i>📐</i>
+                <div class="kpi"><img src="SLAC_Dashboard_Individual_Icons%20(1)/04_KPI_Average_Unit_Size_Ruler.png" alt="">
                     <div><b>699 / 763 SF</b><span>Avg. Unit Size</span></div>
                 </div>
-                <div class="kpi"><i>$</i>
+                <div class="kpi"><img src="SLAC_Dashboard_Individual_Icons%20(1)/05_KPI_Average_Rent_Dollar_Coin.png" alt="">
                     <div><b>$5,730 / $6,250</b><span>Avg. Asking Rent</span></div>
                 </div>
-                <div class="kpi"><i>📊</i>
+                <div class="kpi"><img src="SLAC_Dashboard_Individual_Icons%20(1)/06_KPI_Rent_Per_SF_Bar_Chart.png" alt="">
                     <div><b>$8.20 / $8.19</b><span>Avg. $/SF</span></div>
                 </div>
             </div>
@@ -426,19 +473,19 @@
                                     from
                                     scratch.</div>
                             </div>
-                            <div class="it"><i class="">👥</i>
+                            <div class="it"><img src="SLAC_Dashboard_Individual_Icons%20(1)/08_Site_Employment_People.png" alt="">
                                 <div><b>Proximity to Stanford Medical and Academic Community</b>Near Stanford University
                                     Medical Center, School of Medicine, research facilities, graduate students,
                                     postdoctoral
                                     researchers, medical residents, and faculty.</div>
                             </div>
-                            <div class="it"><i class="">🌳</i>
+                            <div class="it"><img src="SLAC_Dashboard_Individual_Icons%20(1)/09_Site_Seclusion_Tree.png" alt="">
                                 <div><b>Residential Neighborhood Setting</b>Surrounded by an established neighborhood,
                                     elementary school, and walkable streets, making it attractive for young families and
                                     renters who value living near work and school.</div>
                             </div>
                             <h3 class="r">Challenges &amp; Considerations</h3>
-                            <div class="it"><i class="r">⚠</i>
+                            <div class="it"><img src="SLAC_Dashboard_Individual_Icons%20(1)/10_Site_Development_Restrictions_Civic_Building.png" alt="">
                                 <div><b>Limited Building Area</b>Redevelopment must fit around existing buildings;
                                     feasible
                                     configurations are constrained and unit count is capped versus a comparable vacant
@@ -511,6 +558,7 @@
                         <div class="row">
                             <div style="width:90px">
                                 <h3 style="font-size:11px">Typology / Positioning</h3>
+                                <img class="positioning-icon" src="SLAC_Dashboard_Individual_Icons%20(1)/13_Positioning_Low_Rise_Building.png" alt="">
                                 <div class="sm">Recommend two feasible Oak Creek approaches: a lighter-touch
                                     attainable-luxury infill option and a heavier-touch two-tier program pairing
                                     Attainable
@@ -521,27 +569,26 @@
                                 <div class="row" style="gap:5px">
                                     <div class="box" style="background:#d9eefa;flex:1;font-size:8.5px"><b class="n"
                                             style="font-size:10.5px">Attainable Luxury</b>
-                                        <p style="margin:4px 0"><b class="n">Audience:</b> Early career and young
-                                            professionals, Stanford affiliates, including law and families.</p>
-                                        <p style="margin:4px 0"><b class="n">Financial Status:</b> ~$250,000</p>
-                                        <p><b class="n">Motivation:</b> Attainable rent, proximity to Stanford and
-                                            transit
-                                            access.</p>
+                                        <p class="profile-detail" style="margin:4px 0"><img src="SLAC_Dashboard_Individual_Icons%20(1)/14_Standard_Luxury_Renter_Profile_People.png" alt=""><span><b class="n">Audience:</b> Early career and young
+                                            professionals, Stanford affiliates, including law and families.</span></p>
+                                        <p class="profile-detail" style="margin:4px 0"><img src="SLAC_Dashboard_Individual_Icons%20(1)/15_Standard_Luxury_Income_Dollar.png" alt=""><span><b class="n">Financial Status:</b> ~$250,000</span></p>
+                                        <p class="profile-detail"><img src="SLAC_Dashboard_Individual_Icons%20(1)/16_Standard_Luxury_Motivation_Target.png" alt=""><span><b class="n">Motivation:</b> Attainable rent, proximity to Stanford and
+                                            transit access.</span></p>
                                     </div>
                                     <div class="box" style="background:#eadcf8;flex:1;font-size:8.5px"><b class="n"
                                             style="font-size:10.5px">Standard Luxury</b>
-                                        <p style="margin:4px 0"><b class="n">Audience:</b> Young professionals,
+                                        <p class="profile-detail" style="margin:4px 0"><img src="SLAC_Dashboard_Individual_Icons%20(1)/14_Standard_Luxury_Renter_Profile_People.png" alt=""><span><b class="n">Audience:</b> Young professionals,
                                             established
-                                            professionals, downsizers.</p>
-                                        <p style="margin:4px 0"><b class="n">Financial Status:</b> $150,000 – $350,000
-                                        </p>
-                                        <p><b class="n">Motivation:</b> Proximity to employment, modern amenities,
-                                            convenience, and green space.</p>
+                                            professionals, downsizers.</span></p>
+                                        <p class="profile-detail" style="margin:4px 0"><img src="SLAC_Dashboard_Individual_Icons%20(1)/15_Standard_Luxury_Income_Dollar.png" alt=""><span><b class="n">Financial Status:</b> $150,000 – $350,000
+                                        </span></p>
+                                        <p class="profile-detail"><img src="SLAC_Dashboard_Individual_Icons%20(1)/16_Standard_Luxury_Motivation_Target.png" alt=""><span><b class="n">Motivation:</b> Proximity to employment, modern amenities,
+                                            convenience, and green space.</span></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <h3 style="margin-top:8px">Positioning Rationale</h3>
+                        <h3 style="margin-top:8px"><img class="hd-icon" src="SLAC_Dashboard_Individual_Icons%20(1)/20_Positioning_Rationale_Target.png" alt="">Positioning Rationale</h3>
                         <ul class="sm">
                             <li>Oak Creek benefits from a prestigious Sand Hill Road address and proximity to Stanford.
                             </li>
@@ -559,15 +606,15 @@
                                 <h4>Attainable Luxury</h4>
                                 <p><i>✦</i>Durable, design-conscious finishes</p>
                                 <p><i>🛋</i>Focused core amenity package</p>
-                                <p><i>🌲</i>Leverage existing Oak Creek amenities where possible</p>
-                                <p><i>👥</i>Replace displaced recreational / gathering spaces</p>
+                                <p><img src="SLAC_Dashboard_Individual_Icons%20(1)/23_Standard_Luxury_Outdoor_Tree.png" alt="">Leverage existing Oak Creek amenities where possible</p>
+                                <p><img src="SLAC_Dashboard_Individual_Icons%20(1)/22_Standard_Luxury_Coworking_People.png" alt="">Replace displaced recreational / gathering spaces</p>
                             </div>
                             <div class="u">
                                 <h4>Standard Luxury</h4>
                                 <p><i>♛</i>Full market-standard amenity package</p>
-                                <p><i>🏋</i>Expanded fitness studio</p>
+                                <p><img src="SLAC_Dashboard_Individual_Icons%20(1)/21_Standard_Luxury_Fitness_Dumbbell.png" alt="">Expanded fitness studio</p>
                                 <p><i>🍸</i>Club lounge</p>
-                                <p><i>⚙</i>Select resident services</p>
+                                <p><img src="SLAC_Dashboard_Individual_Icons%20(1)/25_Standard_Luxury_Resident_Services_Star.png" alt="">Select resident services</p>
                             </div>
                         </div>
                     </div>
@@ -963,7 +1010,7 @@
                     </table>
                 </div>
                 <div class="card">
-                    <div class="hd "><em>8</em>Case Study / Lessons Learned</div>
+                    <div class="hd "><em>8</em><img class="hd-icon" src="SLAC_Dashboard_Individual_Icons%20(1)/31_Key_Lessons_Lightbulb.png" alt="">Case Study / Lessons Learned</div>
                     <div class="row" style="align-items:stretch">
                         <div style="width:230px;text-align:center">
                             <div class="sm nv" style="font-weight:700">Observed Rent Difference for 1965 to 1999 Vintage
